@@ -1,0 +1,136 @@
+.hero {
+  position: relative;
+  min-height: 380px;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('../../assets/2.jpeg') center/cover no-repeat;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(59, 33, 99, 0.92) 0%,
+    rgba(75, 44, 127, 0.75) 45%,
+    rgba(75, 44, 127, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.hero > .container {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr var(--sidebar-width);
+  gap: var(--layout-gap);
+  padding: 48px var(--container-pad-x) 36px;
+  align-items: end;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  color: var(--white);
+  min-width: 0;
+}
+
+.hero-grid-spacer {
+  /* จองพื้นที่คอลัมน์ sidebar ให้ตรงกับ main-layout */
+}
+
+.hero-content h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.hero-accent {
+  color: var(--yellow);
+}
+
+.hero-content > p {
+  font-size: 15px;
+  opacity: 0.9;
+  font-weight: 300;
+  margin-bottom: 24px;
+  max-width: 640px;
+  line-height: 1.65;
+}
+
+.hero-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  max-width: 560px;
+}
+
+.hero-profile-avatar {
+  --avatar-size: 88px;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--yellow);
+  aspect-ratio: 1;
+}
+
+.hero-profile-avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.hero-profile-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-profile-text span {
+  display: block;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.hero-profile-text strong {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.hero-profile-term {
+  white-space: nowrap;
+}
+
+.hero-profile-text .hero-accent {
+  display: inline;
+}
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-grid-spacer {
+    display: none;
+  }
+}

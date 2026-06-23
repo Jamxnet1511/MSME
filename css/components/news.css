@@ -1,0 +1,134 @@
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.news-list:not(.is-expanded) .news-item-more {
+  display: none;
+}
+
+.news-item {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 12px;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: inherit;
+  cursor: pointer;
+}
+
+.news-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(75, 44, 127, 0.18);
+}
+
+.news-thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--white);
+  font-size: 26px;
+}
+
+.news-thumb.purple { background: var(--purple-light); }
+.news-thumb.dark-purple { background: var(--purple); }
+.news-thumb.green { background: var(--green); }
+
+.news-thumb-img {
+  padding: 0;
+  overflow: hidden;
+  background: var(--gray-100, #eee);
+}
+
+.news-thumb-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.news-body .tag {
+  font-size: 12px;
+  color: var(--purple);
+  background: var(--purple-pale);
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.news-body h3 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.news-body time {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* Promo Cards */
+.promo-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.promo-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border-radius: var(--radius);
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.promo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.promo-purple {
+  background: var(--purple-pale);
+  color: var(--purple);
+}
+
+.promo-yellow {
+  background: #fff8dc;
+  color: #7a5f00;
+}
+
+.promo-card i {
+  font-size: 30px;
+  opacity: 0.8;
+}
+
+.promo-card h4 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.promo-card p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .promo-cards {
+    grid-template-columns: 1fr;
+  }
+}

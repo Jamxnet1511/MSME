@@ -1,0 +1,37 @@
+.sme-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.sme-card {
+  background: var(--purple-pale);
+  padding: 20px;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.sme-card i {
+  font-size: 34px;
+  color: var(--purple);
+  margin-bottom: 10px;
+}
+
+.sme-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--purple);
+  margin-bottom: 6px;
+}
+
+.sme-card p {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+@media (max-width: 768px) {
+  .sme-cards {
+    grid-template-columns: 1fr;
+  }
+}

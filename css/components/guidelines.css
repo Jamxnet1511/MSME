@@ -1,0 +1,38 @@
+.guidelines {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.guidelines li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.guideline-num {
+  width: 44px;
+  height: 44px;
+  background: var(--yellow);
+  color: var(--purple-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.guidelines h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--purple);
+  margin-bottom: 4px;
+}
+
+.guidelines p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.55;
+}

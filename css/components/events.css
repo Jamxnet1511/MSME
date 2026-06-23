@@ -1,0 +1,145 @@
+/* ===== Event Carousel ===== */
+.event-featured {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+
+.event-carousel-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+.event-carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.event-carousel-slide img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  display: block;
+  cursor: zoom-in;
+}
+
+/* ===== Event Folder View ===== */
+.events-section .event-folder-view {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.events-section.is-expanded .event-default-view {
+  display: none;
+}
+
+.events-section.is-expanded .event-folder-view {
+  display: grid;
+}
+
+.event-folder-card {
+  display: block;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.event-folder-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(75, 44, 127, 0.18);
+}
+
+.event-folder-thumb {
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.event-folder-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== Event List ===== */
+.event-list { display: flex; flex-direction: column; gap: 10px; }
+
+.event-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  background: var(--grey-bg);
+  border-radius: var(--radius);
+}
+
+.event-date {
+  background: var(--purple);
+  color: var(--white);
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  min-width: 56px;
+  flex-shrink: 0;
+}
+
+.event-date .day {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.event-date .month {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.event-info { flex: 1; min-width: 0; }
+
+.event-info h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.event-info p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.event-status {
+  font-size: 12px;
+  padding: 5px 11px;
+  border-radius: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.event-status.upcoming {
+  background: var(--purple-pale);
+  color: var(--purple);
+}
+
+.event-status.open {
+  background: #d4edda;
+  color: var(--green);
+}
+
+@media (max-width: 768px) {
+  .event-row {
+    flex-wrap: wrap;
+  }
+
+  .event-status {
+    width: 100%;
+    text-align: center;
+  }
+}

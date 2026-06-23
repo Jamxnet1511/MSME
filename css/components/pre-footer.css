@@ -1,0 +1,38 @@
+.pre-footer {
+  background: var(--purple);
+  padding: 40px 0;
+}
+
+.pre-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+.size-card h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--yellow);
+  margin-bottom: 10px;
+}
+
+.size-card p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .pre-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pre-footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

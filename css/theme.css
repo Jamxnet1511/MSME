@@ -1,0 +1,30 @@
+/* ===== Design Tokens / Theme ===== */
+:root {
+  /* --- Brand Colors --- */
+  --purple: #4B2C7F;
+  --purple-dark: #3a2163;
+  --purple-light: #6b4a9e;
+  --purple-pale: #ede7f5;
+  --yellow: #F9C80E;
+  --yellow-dark: #e0b30a;
+  --green: #2d9d4e;
+
+  /* --- Neutral Colors --- */
+  --white: #ffffff;
+  --grey-bg: #f5f6f8;
+  --text: #222;
+  --text-muted: #666;
+
+  /* --- Effects --- */
+  --shadow: 0 2px 12px rgba(75, 44, 127, 0.1);
+  --radius: 10px;
+
+  /* --- Typography --- */
+  --font: 'Kanit', sans-serif;
+
+  /* --- Layout --- */
+  --container-max: 1440px;
+  --container-pad-x: 12px;
+  --layout-gap: 56px;
+  --sidebar-width: 320px;
+}
